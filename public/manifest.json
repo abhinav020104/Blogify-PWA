@@ -1,18 +1,25 @@
 {
-  "lang": "en-us",
-  "name": "Blogify  app",
-  "short_name": "Blog ",
-  "description": "An app to read and post blogs",
-  "start_url": "/",
-  "background_color": "#2f3d58",
-  "theme_color": "#2f3d58",
-  "orientation": "any",
-  "display": "standalone",
+  "short_name": "Blogify",
+  "name": "Blogify",
   "icons": [
-      {
-          "src": "https://img.freepik.com/free-vector/colorful-bird-illustration-gradient_343694-1741.jpg?size=338&ext=jpg&ga=GA1.1.44546679.1716285600&semt=ais_user",
-          "sizes": "512x512"
-      }
-  ]
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
 }
-
