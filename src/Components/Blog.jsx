@@ -18,7 +18,7 @@ const Blog = ({ blogData }) => {
             console.log(status);
             const response = await axios({
                 method: "put",
-                url: `https://blogify-ds91.onrender.com/api/v1/blog/changepublishstatus/${blogData.id}/${status}`,
+                url: `https://blogify-backend.codewithabhinav.online/api/v1/blog/changepublishstatus/${blogData.id}/${status}`,
                 data: {},
             });
             console.log(response);
@@ -53,7 +53,7 @@ const Blog = ({ blogData }) => {
             toast.loading("Deleting Blog");
             const response = await axios({
                 method: "delete",
-                url: `https://blogify-ds91.onrender.com/api/v1/blog/deleteblog/${blogData.id}`,
+                url: `https://blogify-backend.codewithabhinav.online/api/v1/blog/deleteblog/${blogData.id}`,
             });
             console.log(response);
             toast.dismiss();

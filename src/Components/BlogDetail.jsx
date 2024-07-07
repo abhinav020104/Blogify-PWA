@@ -21,9 +21,9 @@ const BlogDetail = () => {
         try {
             setLoading(true);
             toast.loading("Fetching blog Details");
-            const blogData = await axios.get(`https://blogify-ds91.onrender.com/api/v1/blog/fetchblog/${id}`);
+            const blogData = await axios.get(`https://blogify-backend.codewithabhinav.online/api/v1/blog/fetchblog/${id}`);
             if(user.id !== undefined){
-                const userCommentData = await axios.post("https://blogify-ds91.onrender.com/api/v1/comment/fetchusercomment", {
+                const userCommentData = await axios.post("https://blogify-backend.codewithabhinav.online/api/v1/comment/fetchusercomment", {
                 postId: id,
                 userId: user.id
             });
@@ -60,7 +60,7 @@ const BlogDetail = () => {
         }else{
             try {
                 toast.loading("Posting comment");
-                const res = await axios.post("https://blogify-ds91.onrender.com/api/v1/comment/addcomment", {
+                const res = await axios.post("https://blogify-backend.codewithabhinav.online/api/v1/comment/addcomment", {
                     content: commentData,
                     postId: id,
                     userId: user.id,
@@ -82,7 +82,7 @@ const BlogDetail = () => {
     const deleteCommentHandler = async (id) => {
         try {
             toast.loading("Deleting comment");
-            const res = await axios.post("https://blogify-ds91.onrender.com/api/v1/comment/deletecomment", { id });
+            const res = await axios.post("https://blogify-backend.codewithabhinav.online/api/v1/comment/deletecomment", { id });
             fetchData();
             toast.dismiss();
             toast.success("Comment deleted successfully");

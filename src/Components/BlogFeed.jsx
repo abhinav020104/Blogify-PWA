@@ -13,7 +13,7 @@ const BlogFeed = () => {
 
     const fetchData = async () => {
         try {
-            const response = await axios.get(`https://blogify-ds91.onrender.com/api/v1/blog/fetchallblogs/${user.id}`);
+            const response = await axios.get(`https://blogify-backend.codewithabhinav.online/api/v1/blog/fetchallblogs/${user.id}`);
             setBlogs(response.data.data);
             setLoading(false);
         } catch (error) {
