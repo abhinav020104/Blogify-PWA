@@ -38,13 +38,15 @@ const BlogFeed = () => {
             </div>
             {loading === false && (
                 <div className="flex flex-col gap-6">
-                    {blogs.map((blog, index) => (
-                        <div key={index} className="border-b-2 border-slate-800 p-2">
+                    {blogs.map((blog, index) => {
+                        return(
+                            <div key={index} className="border-b-2 border-slate-800 p-2">
                             <div className="font-bold text-2xl text-black cursor-pointer" onClick={() => navigate(`/blogdetail/${blog.id}`)}>
                                 {blog.title}
                             </div>
-                        </div>
-                    ))}
+                            </div>
+                        )
+                    })}
                 </div>
             )}
             {loading === true && (

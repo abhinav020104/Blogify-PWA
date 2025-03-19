@@ -22,7 +22,7 @@ function Signup() {
       toast.loading("Sign Up in process");
       const response = await axios({
         method: "POST",
-        url: "https://blogify-backend.codewithabhinav.online/api/v1/auth/signup",
+        url: "https://blogify-backend.codewithabhinav.in/api/v1/auth/signup",
         data: signUpData,
       });
       toast.dismiss();

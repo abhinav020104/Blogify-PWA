@@ -4,6 +4,7 @@ const authRoutes = require("./Routes/Auth");
 const blogRoutes = require("./Routes/Blogs");
 const commentRoutes = require("./Routes/Comments");
 const cors = require("cors"); 
+const { raw } = require("@prisma/client/runtime/library");
 app.use(express.json()); 
 app.get("/" , (req , res)=>{
     res.status(200).json({
