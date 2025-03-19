@@ -97,7 +97,7 @@ const EditBlog = () => {
 
     useEffect(() => {
         fetchData();
-    }, []);
+    }, [user]);
 
     return (
         <div className="flex flex-col h-screen overflow-auto">
